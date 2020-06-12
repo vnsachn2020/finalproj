@@ -2,6 +2,7 @@
 # Final Project
 
 Implemented:
+
 Existing commands:
 - light
   - add a light to the symbol table
@@ -21,6 +22,7 @@ New primitive shapes:
   - creates a pyramid with a rectangular base in which x y z is the front left corner of its base
 
 Proprosal:
+
 Existing commands:
 - light
 - mesh
