@@ -175,13 +175,10 @@ def run(filename):
             elif c == 'save_coord_system':
                 symbols[command['cs']][1] = stack[-1][:]
             elif c == 'mesh':
-                if command['constants'] and command['constants']!= ":":
+               if command['constants'] and command['constants']!= ":":
                     reflect = command['constants']
-                add_mesh(tmp, args[0] + '.obj')
-                if command['cs']:
-                    matrix_mult(symbols[command['cs']][1], tmp)
-                else:
-                    matrix_mult( stack[-1], tmp )
+                add_mesh(tmp, command['cs'] + '.obj')
+                matrix_mult( stack[-1], tmp )
                 draw_polygons(tmp, screen, zbuffer, view, ambient, light, symbols, reflect)
                 tmp = []
                 reflect = '.white'
